@@ -3,3 +3,4 @@ vendors
 .vscode
 src/bundle.js
 src/bundle.js.map
+typings
