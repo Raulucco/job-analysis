@@ -1,0 +1,5 @@
+node_modules
+vendors
+.vscode
+src/bundle.js
+src/bundle.js.map
