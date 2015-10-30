@@ -1,0 +1,118 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1>Job analysis</h1>
+        <div class="panel-group filteredSearch">
+            <div class="panel panel-basic">
+                <div class="panel-body">
+                    <div class="container-fluid">
+
+                        <div class="col-md-5">
+                        </div>
+                        <div class="col-md-5">
+                            <div id="searchBox">
+                                <div class="filter-analysis">
+                                    <label>
+                                        <div class="input-group">
+                                            <input type="text" placeholder="Search for..." class="form-control" name="filter" data-ng-model="list.filter">
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default search-box-buttons"><span class="fm icon-search"></span></button>
+                                        </span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 text-right">
+                            <div class="filterButton">
+                                <a aria-controls="collapseTwo" aria-expanded="false" href="#collapseTwo" data-parent="#otherFilter" data-toggle="collapse">
+                                    Custom Filter
+                                </a>
+                                <span class="fm icon-filter"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="row">
+
+    <div class="col-md-12 clearfix">
+        <a href="#" data-ng-click="ja.transitionToCreate($event)"
+        class="pull-right gutter-xs-bottom"><span class="fm icon-plus"></span>Create</a>
+    </div>
+
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead class="">
+            <th>Short Name</th>
+            <th>Description</th>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="analysis in ja.analyses | filter:list.filter track by $index">
+                    <td>
+                        <a data-ng-bind="analysis.name" ng-click="ja.choseAnalysis($event, analysis)" href="#"><!-- ui-sref="home.job-analysis.edit({id: analysis.id})"--></a>
+                    </td>
+                    <td>
+                        <div data-ng-bind="analysis.description"></div>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+    </div>
+    <div class="col-md-12">
+        <nav class="table-pager" role="toolbar">
+
+
+            <div class="row">
+                <div class="pager-display-controls col-xs-12 col-sm-12 col-md-5">
+                    <input type="hidden" name="_ref" value="yuzmrk9bpt0">            <label for="pagination.rowsPerPage">Show <span class="accessible-content">results per page</span></label>
+
+
+                    <select name="pagination.rowsPerPage" id="pagination.rowsPerPage" aria-describedby="ARIA_rowsPerPage">
+                        <option value="10">10</option>
+                        <option value="25" selected="selected">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+
+
+                    </select>
+
+                    <span class="accessible-content" id="ARIA_rowsPerPage">Go button apply change of display per page.</span>
+                    <span aria-hidden="true">&nbsp;results per page</span>
+                    <input type="submit" id="resultsPerPage" value="GO" class="btn btn-sm btn-default" title="Apply change of display per page.">
+                    <label for="status" style="display:none;">HiddenStatus</label>
+                    <input type="text" name="status" id="status" style="display:none;">
+
+
+
+
+                </div>
+                <div class="pager-nav-controls col-xs-12 col-sm-12 col-md-7"><!--
+					-->
+                    <span class="accessible-content" id="ARIA_First_Page">First Page</span>
+                    <span class="btn btn-sm btn-pagination disabled" title="First Page" aria-describedby="ARIA_First_Page">First</span><!--
+					-->
+                    <span class="accessible-content" id="ARIA_Previous_Page">Previous Page</span>
+                    <span class="btn btn-sm btn-pagination disabled" title="Previous Page" aria-describedby="ARIA_Previous_Page">Previous</span><!--
+				-->
+                    <!--					-->
+                    <span class="accessible-content" id="ARIA_Next_Page">Next Page</span>
+                    <span class="btn btn-sm btn-pagination disabled" title="Next Page" aria-describedby="ARIA_Next_Page">Next</span><!--
+					-->
+                    <span class="accessible-content" id="ARIA_Last_Page">Last Page</span>
+                    <span class="btn btn-sm btn-pagination disabled" title="Last Page" aria-describedby="ARIA_Last_Page">Last</span><!--
+			--></div>
+            </div>
+
+        </nav>
+    </div>
+
+
+</div>

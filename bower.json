@@ -1,0 +1,32 @@
+{
+  "name": "job analysis app",
+  "version": "0.0.0",
+  "authors": [
+    "Raulucco <rauluccocm@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendors",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.7",
+    "angular-mocks": "~1.4.7",
+    "angular-aria": "~1.4.7"
+  },
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "angular-resource": "~1.4.7",
+    "angular-messages": "~1.4.7",
+    "bootstrap": "~3.3.5"
+  }
+}

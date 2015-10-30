@@ -1,0 +1,1 @@
+module.exports = 'D:/p4/rcalvo_DEV-ATS/Enterprise/cm/app/target/cm-DEV-PC-SNAPSHOT/ja/app';

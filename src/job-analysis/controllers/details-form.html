@@ -1,0 +1,74 @@
+<div class="job-analysis-%name%">
+    <h1>Create</h1>
+    <form name="%name%.form">
+        <div class="panel panel-basic">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" data-ng-model="%name%.jobAnalysis.name" placeholder="Name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="positionTitle">Position Title</label>
+                                <input type="text" class="form-control" id="positionTitle" name="positionTitle" data-ng-model="%name%.jobAnalysis.pdTitle"
+                                placeholder="Position Title">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea type="text" class="form-control" id="description" name="description" data-ng-model="%name%.jobAnalysis.description"
+                                placeholder="Description">
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-5" ng-show="%name%.organizations && %name%.organizations.length">
+                            <div class="form-group">
+                                <label for="organizations">Organization</label>
+                                <select class="form-control" id="organizations" name="orgId" data-ng-model="%name%.jobAnalysis.orgId" data-ng-change="%name%.loadDepartments()">
+                                    <!--  data-ng-options="org.name group by org.parent for org in %name%.organizations track by org.id" -->
+
+                                    <option ng-repeat="org in %name%.organizations" value="org.id">{{org.name}}
+                                        <optgroup  label="org.name"  ng-show="org.childOrgs">
+                                            <option ng-repeat="o in org.childOrgs" value="o.id">{{o.name}}</option>
+                                            <optgroup label="o.name" ng-show="o.childOrgs">
+                                                <option ng-repeat="_o in o.childOrgs" value="_o.id">{{_o.name}}</option>
+                                            </optgroup>
+                                        </optgroup>
+
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="departments">Department</label>
+                                <select class="form-control" id="departments" name="deptId" data-ng-model="%name%.jobAnalysis.deptId" data-ng-disabled="!%name%.departments.length"
+                                data-ng-options="dept.deptId as dept.name for dept in %name%.departments"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" data-ng-click="%name%.submit($event)">Submit</button>
+        <!--Back to All Job Analysis-->
+        <a role="button" class="btn btn-link" ui-sref="home.job-analysis.list">Cancel</a>
+
+    </form>
+
+</div>

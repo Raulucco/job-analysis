@@ -1,0 +1,24 @@
+<div class="create-job-analysis">
+    <a ui-sref="home.job-analysis.list">Back to All Job Analysis</a>
+    <form name="create.form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name"
+            name="name" data-ng-model="create.jobAnalysis.name" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description"
+            name="description" data-ng-model="create.jobAnalysis.description"
+            placeholder="Description">
+        </div>
+        <div class="form-group">
+            <label for="positionTitle">Position Title</label>
+            <input type="text" class="form-control"
+            id="positionTitle" name="positionTitle" data-ng-model="create.jobAnalysis.pdTitle"
+            placeholder="Position Title">
+        </div>
+
+        <button type="submit" class="btn btn-default" data-ng-click="create.submit($event)">Submit</button>
+    </form>
+</div>

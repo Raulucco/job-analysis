@@ -1,0 +1,55 @@
+<div class="container">
+    <h2>All job analyses</h2>
+    <div id="searchBox">
+        <div class="filter-analysis">
+            <label>
+                <span>Search:</span>
+                <input type="text" name="filter" data-ng-model="list.filter" />
+            </label>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-condensed table-hover table-striped datatable">
+            <thead class="">
+                <th>Short Name</th>
+                <th>Description</th>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="analysis in ja.analyses | filter:list.filter track by $index">
+                    <td>
+                        <a data-ng-bind="analysis.name" ng-click="ja.choseAnalysis(analysis)" ui-sref="home.job-analysis.details({id: analysis.id})"></a>
+                    </td>
+                    <td>
+                        <div data-ng-bind="analysis.description"></div>
+                    </td>
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+        <div class="actionBar" id="actionBar">
+            <div class="pagination">
+                &lt;&lt;&nbsp; &nbsp;&lt;&nbsp; &nbsp;&gt;&nbsp; &nbsp;&gt;&gt;&nbsp; &nbsp;
+            </div>
+
+            <div id="pagenav-select">
+                <label for="pagination.rowsPerPage" class="label">Show
+
+                    <select name="pagination.rowsPerPage" id="pagination.rowsPerPage">
+                        <option value="10">10</option>
+                        <option value="25" selected="selected">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+
+                    &nbsp;results per page</label>
+                <input type="image" id="resultsPerPage" src="/cm/images/goBtn.gif" alt="GO" value="GO" title="show results per page">
+            </div>
+
+        </div>
+    </div>
+
+</div>

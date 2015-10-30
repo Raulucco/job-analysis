@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Analysis local application</title>
+</head>
+
+<body ng-app="cm">
+    Job Analysis local application
+    <form name="context">
+        <input type="hidden" name="serverURL" value="locahost:8680/server-url/" />
+        <input type="hidden" name="contextURL" value="locahost:8680/context-url/" />
+        <input type="hidden" name="baseURL" value="locahost:8680/base-url/" />
+    </form>
+    <div ui-view></div>
+
+    <script src="vendors/angular/angular.js"></script>
+    <script src="vendors/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendors/angular-resource/angular-resource.js"></script>
+    <script src="vendors/angular-mocks/angular-mocks.js"></script>
+    <script src="bundle.js"></script>
+</body>
+
+</html>

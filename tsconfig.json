@@ -1,0 +1,56 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "sourceMap": true
+    },
+    "files": [
+         "typings/tsd.d.ts",
+        "src/common/index.d.ts",
+        "src/config.ts",
+        "src/index.ts",
+        "src/common/module.ts",
+        "src/common/services.ts",
+        "src/ja-api-context.ts",
+        "src/job-analysis/config.ts",
+        "src/job-analysis/controllers/index.ts",
+        "src/job-analysis/controllers/edit.ts",
+        "src/job-analysis/controllers/list.ts",
+        "src/job-analysis/controllers/create.ts",
+        "src/job-analysis/index.ts",
+        "src/job-analysis/server-mocks.ts",
+        "src/job-analysis/service.ts",
+        "src/organizations/index.ts",
+        "src/departments/index.ts",
+        "src/user/timeout.ts",
+        "src/values.ts"
+    ],
+    "filesGlob": [
+        "src/**/*.ts",
+        "typings/tsd.d.ts",
+        "!src/**/*.spec.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "bower_components",
+        "libs",
+        "vendors",
+        "3rdParty"
+    ],
+    "formatCodeOptions": {
+        "indentSize": 4,
+        "tabSize": 4,
+        "newLineCharacter": "\r\n",
+        "convertTabsToSpaces": true,
+        "insertSpaceAfterCommaDelimiter": true,
+        "insertSpaceAfterSemicolonInForStatements": true,
+        "insertSpaceBeforeAndAfterBinaryOperators": true,
+        "insertSpaceAfterKeywordsInControlFlowStatements": true,
+        "insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+        "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+        "placeOpenBraceOnNewLineForFunctions": false,
+        "placeOpenBraceOnNewLineForControlBlocks": false
+    }
+}
